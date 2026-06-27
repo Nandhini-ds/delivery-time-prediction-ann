@@ -1,5 +1,5 @@
 # delivery-time-prediction-ann
-# Deep Neural Network (ANN) model for predicting food delivery time.
+# Deep Neural Network (ANN) model for predicting food (Porter) delivery time.
 ## Project Overview
 
 This project develops a Deep Neural Network (ANN) regression model to predict food delivery time using delivery-related data. The objective is to improve the accuracy of estimated delivery times (ETA), helping logistics platforms provide reliable delivery estimates, enhance customer satisfaction, and support efficient delivery operations.
@@ -31,24 +31,15 @@ The dataset contains historical food delivery order information collected from P
 | `total_onshift_partners`                       | Number of delivery partners on duty when the order was placed.                                                        |
 | `total_busy_partners`                          | Number of delivery partners currently occupied with other deliveries.                                                 |
 | `total_outstanding_orders`                     | Total number of pending orders at the time the order was placed.                                                      |
-| `estimated_store_to_consumer_driving_duration` | Estimated driving time from the restaurant to the customer's location.                                                |
-
-| `actual_delivery_time` | Timestamp when the order was delivered. |
-| `store_primary_category` | Primary category of the restaurant. |
-| `order_protocol` | Order placement method. |
-| `total_items` | Total number of items in the order. |
-| `subtotal` | Total order value before taxes and fees. |
-
+| `estimated_store_to_consumer_driving_duration` | Estimated driving time from the restaurant to the customer's location.                                               
 ## Project Workflow
 
 1. Data Exploration
 2. Exploratory Data Analysis (EDA)
 3. Feature Engineering
-
    * Created date and time-based features from the `created_at` timestamp.
    * Calculated the target variable (delivery time) using the difference between `created_at` and `actual_delivery_time`.
 4. Data Preprocessing
-
    * One-Hot Encoded categorical features.
    * Standardized numerical features using `StandardScaler`.
 5. Train-Validation-Test Split
